@@ -27,6 +27,7 @@ DIV_P_TABLE = pd.pivot_table(DIV_TABLE, index=['stockcode'], columns=['ANNDATE_M
                              values=['ann_date', 'report_period', 'dvd_pre_tax']).fillna(0)  # 转置:按照信息排序后转置
 DIV_P_TABLE.columns = [i[0] + '_{}'.format(i[1]) for i in DIV_P_TABLE.columns]  # 重命名列名
 
+
 ##################################################################
 # 2.合并MV_TABLE表与DIV_P_TABLE表 分块合并方便矩阵运算
 ##################################################################
